@@ -1,16 +1,13 @@
 package hackingnight.main;
 
-import java.io.File;
+
+
+
 import java.io.IOException;
-import java.io.ObjectInputStream.GetField;
-import java.net.UnknownHostException;
 
 import javax.sound.sampled.AudioFormat;
-import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
-import javax.sound.sampled.DataLine;
-import javax.sound.sampled.FloatControl;
 import javax.sound.sampled.Line;
 import javax.sound.sampled.LineUnavailableException;
 
@@ -29,9 +26,9 @@ public class Board {
 	private static final String HOST = "localhost";
 	private static final int PORT = 4223;
 	private static int OLDPOSITION = 0;
-	static Clip bassdrum = null;
 	
-	public static void main(String args[]) throws UnknownHostException, AlreadyConnectedException, IOException, NotConnectedException, TimeoutException, LineUnavailableException {
+	
+	public static void main(String args[]) throws  AlreadyConnectedException, IOException, NotConnectedException, TimeoutException, LineUnavailableException {
 		IPConnection ipcon = new IPConnection(); // Create IP connection
 		ipcon.connect(HOST, PORT);
 		
