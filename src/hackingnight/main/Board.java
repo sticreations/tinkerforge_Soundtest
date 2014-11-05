@@ -90,46 +90,8 @@ public class Board {
 		
 		
 		
+		
 
-		BrickletMultiTouch multiTouch = new BrickletMultiTouch("jTu", ipcon);
-		
-		try{
-		
-	    
-	  
-	    
-		}catch(Exception e){
-			
-		}
-		
-		multiTouch.addTouchStateListener(new TouchStateListener() {
-			
-			@Override
-			public void touchState(int state) {
-				// TODO Auto-generated method stub
-				
-				try{
-				if(state == 6272) {
-					
-					File bd = new File("sound/BD.wav");	
-					AudioInputStream stream = AudioSystem.getAudioInputStream(bd);
-					AudioFormat format = stream.getFormat();
-					DataLine.Info info = new DataLine.Info(Clip.class, format);
-				    bassdrum = (Clip) AudioSystem.getLine(info);
-				    bassdrum.open(stream);
-				    bassdrum.start();
-					bassdrum.start();
-					}
-					System.out.println("www");
-				}
-				 catch(Exception e){
-					 
-				 };
-				
-				
-				
-			}
-		});
 		
 //		while(true) {
 //			
